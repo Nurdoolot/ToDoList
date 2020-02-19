@@ -1,0 +1,12 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: rayfi.vv@gmail.com
+Date: Sun, 16 Feb 2020 04:09:39 -0000
+Message-ID: <158182617971.5307.3787774184963990625@ray-Aspire-E5-576G>
+
+Для сброса пароля rayfi.vv@gmail.com. Следуете к инструкциям
+http://127.0.0.1:8000/accounts/reset/Mg/5e1-1276c4232f1a033058fc/
+-------------------------------------------------------------------------------

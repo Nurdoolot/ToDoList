@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Login</title>
+</head>
+<body>
+    {% if form.errors %}
+    <p>Your username and password didn't match.Try again</p>
+    {% endif %}
+
+    {% if next %}
+    {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page.
+        To proceed, </p>
+    {% else %}
+        please login to see this page 
+        {% endif %}
+    {% endif %}
+    <form class="box" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <h1>Login</h1>
+        <div>
+            <td>{{form.username}}</td>
+        </div>
+        <div>
+            <td>{{form.password}}</td>
+        </div>
+        <div>
+            <input type="submit", value="login">
+            <input type="hidden" name="next" value="{{next}}">
+        </div>
+        
+        <p><a href="{% url 'password_reset' %}">Зарегистрироваться</a></p>
+        <p><a href="{% url 'password_reset' %}">Забыли пароль?</a></p>
+        
+    </form>
+</body>
+</html>
